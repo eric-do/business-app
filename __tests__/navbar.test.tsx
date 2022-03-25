@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import Navbar, { pages, brand, contact } from '@/components/navbar'
+import Navbar, { pages, brand, contact } from '@/components/common/Navbar/Navbar'
 
 describe('Navbar', () => {
   it('renders site brand', () => {

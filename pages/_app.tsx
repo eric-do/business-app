@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import Layout from '@/components/layout';
+import { Layout } from '@/components/common/';
 
 const colors = {
   brand: {

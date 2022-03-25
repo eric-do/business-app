@@ -5,7 +5,7 @@ describe('Navbar', () => {
   it('renders site brand', () => {
     render(<Navbar />)
 
-    const brandLogo = screen.getByRole('heading', {
+    const brandLogo = screen.getByRole('link', {
       name: brand,
     })
 

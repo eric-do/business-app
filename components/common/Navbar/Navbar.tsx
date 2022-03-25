@@ -8,11 +8,11 @@ import {
   Text,
   Center,
   HStack,
-  Link,
   useDisclosure,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
+import { Link } from '@/components/ui'
 
 export const pages = [
   {
@@ -37,7 +37,11 @@ const Navbar = () => {
   return (
     <Flex alignItems={'center'} p={4}>
       <Box>
-        <Heading>{brand}</Heading>
+        <Link
+          src='/'
+        >
+          <Heading>{brand}</Heading>
+        </Link>
       </Box>
       <Spacer />
       <Flex
@@ -60,9 +64,9 @@ const DesktopNav = () => {
   return (
     <HStack spacing={14} justifyContent={'space-between'}>
       {pages.map((p) => (
-        <NextLink href={p.url} key={p.url} passHref>
-          <Link fontSize={'lg'}>{p.title}</Link>
-        </NextLink>
+        <Link src={p.url} key={p.url}>
+          <Text fontSize={'lg'}>{p.title}</Text>
+        </Link>
       ))}
     </HStack>
   );

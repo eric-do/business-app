@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
 
-const Products = () => {
+const Services = () => {
   return (
     <Box>
-      <Text>About</Text>
+      <Text>Services</Text>
     </Box>
   )
 }
 
-export default Products;
+export default Services;

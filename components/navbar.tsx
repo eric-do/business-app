@@ -2,18 +2,18 @@ import React from 'react';
 import { Box, Text, Center, HStack, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
-const pages = [
+export const pages = [
   {
-    title: 'About',
-    url: '/about'
+    title: 'Services',
+    url: '/services'
   },
   {
     title: 'Careers',
     url: '/careers'
   },
   {
-    title: 'Products',
-    url: '/products'
+    title: 'About',
+    url: '/about'
   },
 ]
 

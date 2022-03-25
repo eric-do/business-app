@@ -8,14 +8,16 @@ import {
   Text,
   Center,
   HStack,
+  VStack,
   useDisclosure,
   IconButton,
+  Collapse
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import { Link } from '@/components/ui'
 
-export const pages = [
+export const NAV_ITEMS = [
   {
     title: 'Services',
     url: '/services',
@@ -46,22 +48,6 @@ const Navbar = () => {
       </Box>
       <Spacer />
       <Flex
-        flex={{ base: 1, md: 'auto' }}
-        justifyContent='flex-end'
-        display={{
-          base: 'flex',
-          md: 'none'
-        }}
-      >
-        <IconButton
-          onClick={onToggle}
-          aria-label='Toggle navigation'
-          icon={
-            isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-          }
-        />
-      </Flex>
-      <Flex
         justifyContent='space-between'
         display={{
           base: 'none',
@@ -71,6 +57,31 @@ const Navbar = () => {
         <DesktopNav />
         <Button colorScheme={'blue'}>{contact}</Button>
       </Flex>
+      <VStack>
+      <Flex
+        flex={{ base: 1, md: 'auto' }}
+        justifyContent='flex-end'
+        display={{
+          base: 'flex',
+          md: 'none'
+        }}
+      >
+        <IconButton
+          onClick={onToggle}
+          variant='ghost'
+          aria-label='Toggle navigation'
+          icon={
+            isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+          }
+        />
+      </Flex>
+      <Collapse
+        in={isOpen}
+        animateOpacity
+      >
+        <MobileNav />
+      </Collapse>
+      </VStack>
     </Flex>
   );
 };
@@ -82,7 +93,7 @@ const DesktopNav = () => {
       justifyContent={'space-between'}
       px={14}
     >
-      {pages.map((p) => (
+      {NAV_ITEMS.map((p) => (
         <Link src={p.url} key={p.url}>
           <Text fontSize={'lg'}>{p.title}</Text>
         </Link>
@@ -90,5 +101,25 @@ const DesktopNav = () => {
     </HStack>
   );
 };
+
+const MobileNav = () => {
+  return (
+    <VStack
+      p={4}
+      display={{ md: 'none' }}
+    >
+      {NAV_ITEMS.map(navItem => (
+        <Link
+         src={navItem.url}
+         key={navItem.url}
+        >
+          <Box>
+            {navItem.title}
+          </Box>
+        </Link>
+      ))}
+    </VStack>
+  )
+}
 
 export default Navbar;

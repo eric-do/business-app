@@ -1,5 +1,20 @@
 import { render, screen } from '@testing-library/react'
-import Navbar, { pages, brand, contact } from '@/components/common/Navbar/Navbar'
+import Navbar, { brand, contact } from '@/components/common/Navbar/Navbar'
+
+const NAV_ITEMS = [
+  {
+    title: 'Services',
+    url: '/services',
+  },
+  {
+    title: 'Careers',
+    url: '/careers',
+  },
+  {
+    title: 'About',
+    url: '/about',
+  },
+];
 
 describe('Navbar', () => {
   it('renders site brand', () => {
@@ -14,7 +29,7 @@ describe('Navbar', () => {
 
   it('renders site sections', () => {
     render(<Navbar />)
-    pages.forEach(p => {
+    NAV_ITEMS.forEach(p => {
       const link = screen.getByRole('link', {
         name: p.title,
       })

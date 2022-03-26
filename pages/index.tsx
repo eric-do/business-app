@@ -11,6 +11,7 @@ import {
   Flex,
   Input,
   Button,
+  HStack,
 } from '@chakra-ui/react';
 
 const Home: NextPage = () => {
@@ -18,24 +19,54 @@ const Home: NextPage = () => {
     <Box>
       <VStack
         alignItems='flex-start'
+        spacing={{
+          base: 5,
+          md: 10
+        }}
       >
         <Heading
           as='h1'
-          fontSize={'3xl'}
+          ml={{
+            base: 0,
+            md: '30%'
+          }}
+          fontSize={{
+            base: '3xl',
+            md: '6xl'
+          }}
           textTransform={'uppercase'}
         >
           Professional Web Development
         </Heading>
         <Heading
           as='h2'
-          fontSize={'2xl'}
+          ml={{
+            base: 0,
+            md: '10% !important'
+          }}
+          fontSize={{
+            base: '3xl',
+            md: '6xl'
+          }}
           fontWeight={400}
           textTransform={'uppercase'}
         >
           Focus on your business.
         </Heading>
         <Divider colorScheme={'red'} />
-        <Text>
+        <Text
+          ml={{
+            base: 0,
+            md: '55% !important'
+          }}
+          fontSize={{
+            md: '2xl'
+          }}
+          w={{
+            base: '100%',
+            md: '43%'
+          }}
+        >
           <strong>
             {`Over 300 hundred software engineers
             trained in modern fullstack app development. `}
@@ -43,7 +74,10 @@ const Home: NextPage = () => {
           Empower your workforce today.
         </Text>
       </VStack>
-      <VStack py={7}>
+      <VStack
+        display={{ md: 'none' }}
+        py={7}
+      >
         <VStack
           spacing={-1}
           w='100%'
@@ -62,6 +96,30 @@ const Home: NextPage = () => {
           </Button>
         </VStack>
       </VStack>
+      <HStack
+        display={{
+          base: 'none',
+          md: 'flex'
+        }}
+        justifyContent='center'
+        py={7}
+        spacing={-1}
+      >
+        <Input
+          py={5}
+          bg={'white'}
+          borderWidth={3}
+          borderColor='black'
+          variant={'with-shadow'}
+          w='auto'
+        />
+        <Button
+          w='auto'
+          variant={'with-shadow'}
+        >
+          Request consultation
+        </Button>
+      </HStack>
       <VStack
         spacing={6}
         alignItems='flex-start'
@@ -77,11 +135,19 @@ const Home: NextPage = () => {
                 bgGradient='linear(to-br,#fcc02b, #ff7979 40%, #a33abd 89%)'
                 bgClip='text'
                 as='h3'
-                fontSize='2xl'
+                fontSize={{
+                  base: 'xl',
+                  md: '3xl'
+                }}
               >
                 {subsection.title}
               </Heading>
-              <Text>
+              <Text
+                fontSize={{
+                  base: 'lg',
+                  md: '2xl'
+                }}
+              >
                 {subsection.description}
               </Text>
             </VStack>

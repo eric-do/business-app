@@ -18,7 +18,6 @@ const Home: NextPage = () => {
     <Box>
       <VStack
         alignItems='flex-start'
-        p={4}
       >
         <Heading
           as='h1'
@@ -44,34 +43,26 @@ const Home: NextPage = () => {
           Empower your workforce today.
         </Text>
       </VStack>
-      <VStack p={4}>
+      <VStack py={7}>
         <VStack
           spacing={-1}
           w='100%'
         >
           <Input
             py={5}
-            boxShadow={'md'}
             bg={'white'}
-            rounded={0}
             borderWidth={3}
             borderColor='black'
+            variant={'with-shadow'}
           />
           <Button
-            w='100%'
-            py={5}
-            boxShadow={'md'}
-            rounded={1}
-            bgColor='white'
-            borderWidth={3}
-            borderColor='black'
+            variant={'with-shadow'}
           >
             Request consultation
           </Button>
         </VStack>
       </VStack>
       <VStack
-        p={4}
         spacing={6}
         alignItems='flex-start'
       >

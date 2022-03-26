@@ -37,7 +37,10 @@ export const contact = 'Contact Us';
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
   return (
-    <VStack>
+    <VStack
+      position='sticky'
+      top={0}
+      >
       <Flex
         alignItems={'flex-start'}
         py={4}
@@ -61,7 +64,11 @@ const Navbar = () => {
           }}
         >
           <DesktopNav />
-          <Button colorScheme={'blue'}>{contact}</Button>
+          <Button
+            variant='with-shadow'
+          >
+            {contact}
+          </Button>
         </Flex>
         <VStack>
           <Flex
@@ -132,7 +139,8 @@ const DesktopNav = () => {
 const MobileNav = ({ onToggle }: { onToggle: () => void }) => {
   return (
     <VStack
-      p={4}
+      pt={0}
+      pb={10}
       width={'100%'}
       display={{ md: 'none' }}
     >
@@ -146,7 +154,11 @@ const MobileNav = ({ onToggle }: { onToggle: () => void }) => {
             onClick={onToggle}
             p={1}
           >
-            {navItem.title}
+            <Text
+              fontWeight={700}
+            >
+              {navItem.title}
+            </Text>
           </Box>
         </Link>
       ))}
@@ -157,9 +169,9 @@ const MobileNav = ({ onToggle }: { onToggle: () => void }) => {
           src='/contact'
         >
           <Button
-            colorScheme={'blue'}
             alignSelf='center'
             onClick={onToggle}
+            variant='with-shadow'
           >
             {contact}
           </Button>

@@ -1,13 +1,16 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
 import {
   Box,
   Heading,
   Text,
   VStack,
   Center,
-  Divider
+  Divider,
+  Flex,
+  Input,
+  Button,
 } from '@chakra-ui/react';
 
 const Home: NextPage = () => {
@@ -17,27 +20,99 @@ const Home: NextPage = () => {
         alignItems='flex-start'
         p={4}
       >
-      <Heading
-        as='h1'
-        fontSize={'3xl'}
-        textTransform={'uppercase'}
+        <Heading
+          as='h1'
+          fontSize={'3xl'}
+          textTransform={'uppercase'}
+        >
+          Professional Web Development
+        </Heading>
+        <Heading
+          as='h2'
+          fontSize={'2xl'}
+          fontWeight={400}
+          textTransform={'uppercase'}
+        >
+          Focus on your business.
+        </Heading>
+        <Divider colorScheme={'red'} />
+        <Text>
+          <strong>
+            {`Over 300 hundred software engineers
+            trained in modern fullstack app development. `}
+          </strong>
+          Empower your workforce today.
+        </Text>
+      </VStack>
+      <VStack p={4}>
+        <VStack
+          spacing={-1}
+          w='100%'
+        >
+          <Input
+            py={5}
+            boxShadow={'md'}
+            bg={'white'}
+            rounded={0}
+            borderWidth={3}
+            borderColor='black'
+          />
+          <Button
+            w='100%'
+            py={5}
+            boxShadow={'md'}
+            rounded={1}
+            bgColor='white'
+            borderWidth={3}
+            borderColor='black'
+          >
+            Request consultation
+          </Button>
+        </VStack>
+      </VStack>
+      <VStack
+        p={4}
+        spacing={6}
+        alignItems='flex-start'
       >
-        Professional Web Development
-      </Heading>
-      <Heading
-        as='h2'
-        fontSize={'2xl'}
-        fontWeight={400}
-        textTransform={'uppercase'}
-      >
-        Focus on your business.
-      </Heading>
-      <Divider
-        colorScheme={'red'}
-      />
+        {
+          subsections.map(subsection => (
+            <VStack
+              key={subsection.title}
+              spacing={3}
+              alignItems='flex-start'
+            >
+              <Heading
+                bgGradient='linear(to-br,#fcc02b, #ff7979 40%, #a33abd 89%)'
+                bgClip='text'
+                as='h3'
+                fontSize='2xl'
+              >
+                {subsection.title}
+              </Heading>
+              <Text>
+                {subsection.description}
+              </Text>
+            </VStack>
+          ))
+        }
       </VStack>
     </Box>
-  )
-}
+  );
+};
 
-export default Home
+const subsections = [
+  {
+    title: 'Learn modern component design with React',
+    description: `Learn how to create React applications
+                  and get experience creating thoughtful
+                  and testable components.`
+  },
+  {
+    title: 'Write fast dependable server code with Express.js',
+    description: `Write safe and reusable code using with input
+                  validation and custom middleware.`
+  },
+]
+
+export default Home;

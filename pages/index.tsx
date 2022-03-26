@@ -5,15 +5,37 @@ import {
   Box,
   Heading,
   Text,
-  Center
+  VStack,
+  Center,
+  Divider
 } from '@chakra-ui/react';
 
 const Home: NextPage = () => {
   return (
     <Box>
-      <Center>
-        <Heading>Professional Web Development</Heading>
-      </Center>
+      <VStack
+        alignItems='flex-start'
+        p={4}
+      >
+      <Heading
+        as='h1'
+        fontSize={'3xl'}
+        textTransform={'uppercase'}
+      >
+        Professional Web Development
+      </Heading>
+      <Heading
+        as='h2'
+        fontSize={'2xl'}
+        fontWeight={400}
+        textTransform={'uppercase'}
+      >
+        Focus on your business.
+      </Heading>
+      <Divider
+        colorScheme={'red'}
+      />
+      </VStack>
     </Box>
   )
 }

@@ -40,7 +40,11 @@ const Navbar = () => {
     <VStack>
       <Flex
         alignItems={'flex-start'}
-        p={4}
+        py={4}
+        px={{
+          base: 4,
+          md: 20
+        }}
         w='100%'
       >
         <Box>
@@ -113,7 +117,12 @@ const DesktopNav = () => {
           src={p.url}
           key={p.url}
         >
-          <Text fontSize={'lg'}>{p.title}</Text>
+          <Text
+            fontSize={'lg'}
+            fontWeight={700}
+          >
+            {p.title}
+          </Text>
         </Link>
       ))}
     </HStack>
@@ -126,7 +135,6 @@ const MobileNav = ({ onToggle }: { onToggle: () => void }) => {
       p={4}
       width={'100%'}
       display={{ md: 'none' }}
-      borderWidth={1}
     >
       {NAV_ITEMS.map((navItem) => (
         <Link
@@ -145,12 +153,17 @@ const MobileNav = ({ onToggle }: { onToggle: () => void }) => {
       <Flex
         justifyContent={'center'}
       >
-        <Button
-          colorScheme={'blue'}
-          alignSelf='center'
+        <Link
+          src='/contact'
         >
-          {contact}
-        </Button>
+          <Button
+            colorScheme={'blue'}
+            alignSelf='center'
+            onClick={onToggle}
+          >
+            {contact}
+          </Button>
+        </Link>
       </Flex>
     </VStack>
   );

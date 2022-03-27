@@ -1,13 +1,10 @@
 import React from 'react';
-import {
-  useField,
-  Field
-} from 'formik';
+import { useField } from 'formik';
 import {
   FormControl,
   FormLabel,
   FormErrorMessage,
-  Input,
+  Textarea,
 } from '@chakra-ui/react';
 
 interface CustomInputProps {
@@ -17,7 +14,7 @@ interface CustomInputProps {
   name: string;
 }
 
-const FormikChakraInput: React.FC<CustomInputProps> = ({
+const FormikChakraTextArea: React.FC<CustomInputProps> = ({
   label,
   id,
   type = 'text',
@@ -28,17 +25,14 @@ const FormikChakraInput: React.FC<CustomInputProps> = ({
   return (
     <FormControl isInvalid={!!error}>
       <FormLabel htmlFor={id}>{label}</FormLabel>
-      <Input
+      <Textarea
         id={id}
-        type={type}
         onBlur={field.onBlur}
-        onChange={field.onChange}
         variant='with-shadow'
       />
       {touched && error && <FormErrorMessage>{error}</FormErrorMessage>}
     </FormControl>
-  )
-
+  );
 };
 
-export default FormikChakraInput;
+export default FormikChakraTextArea;

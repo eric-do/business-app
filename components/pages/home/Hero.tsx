@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 import {
   Heading,
   Text,
@@ -29,6 +28,10 @@ const Hero = () => {
           base: '3xl',
           md: '6xl'
         }}
+        w={{
+          base: '100%',
+          md: '50%'
+        }}
         textTransform={'uppercase'}
       >
         Professional Web Development
@@ -42,6 +45,10 @@ const Hero = () => {
         fontSize={{
           base: '3xl',
           md: '6xl'
+        }}
+        w={{
+          base: '100%',
+          md: '30%'
         }}
         fontWeight={400}
         textTransform={'uppercase'}

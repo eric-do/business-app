@@ -44,10 +44,12 @@ const Navbar = () => {
     <VStack
       position='sticky'
       top={0}
+      bg='whiteAlpha.900'
+      backdropBlur='50px'
+      backdropFilter='auto'
       >
       <Flex
         alignItems={'flex-start'}
-        bgColor='white'
         py={4}
         px={{
           base: 4,

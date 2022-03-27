@@ -3,15 +3,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import {
   Box,
-  Heading,
-  Text,
-  VStack,
-  Center,
-  Divider,
-  Flex,
-  Input,
-  Button,
-  HStack,
+  VStack
 } from '@chakra-ui/react';
 import {
   Hero,

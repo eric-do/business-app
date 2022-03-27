@@ -1,26 +1,16 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import Layout from '@/components/layout';
-
-const colors = {
-  brand: {
-    900: '#1a365d',
-    800: '#153e75',
-    700: '#2a69ac',
-  }
-}
-
-const theme = extendTheme({ colors });
+import type { AppProps } from 'next/app';
+import { ChakraProvider } from '@chakra-ui/react';
+import { Layout } from '@/components/common/';
+import Theme from '../theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={Theme}>
       <Layout>
         <Component {...pageProps} />
       </Layout>
     </ChakraProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

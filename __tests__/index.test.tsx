@@ -1,12 +1,17 @@
 import { render, screen } from '@testing-library/react'
+import { ThemeProvider, ChakraProvider } from '@chakra-ui/react'
 import Home from '../pages/index'
 
 describe('Home', () => {
   it('renders a heading', () => {
-    render(<Home />)
+    render(
+    <ChakraProvider>
+      <Home />
+    </ChakraProvider>
+    )
 
     const heading = screen.getByRole('heading', {
-      name: /welcome to next\.js!/i,
+      name: 'Professional Web Development',
     })
 
     expect(heading).toBeInTheDocument()

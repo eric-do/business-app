@@ -27,7 +27,6 @@ const InfoRequestForm = () => {
       }}
     >
       {({ errors, touched }) => {
-        // console.log({errors, touched})
         return (
           <Form>
             <Box
@@ -52,7 +51,7 @@ const InfoRequestForm = () => {
                     id='name'
                     type='text'
                     name='name'
-                    label='First name'
+                    label='Name'
                   />
                   <Input
                     id='email'

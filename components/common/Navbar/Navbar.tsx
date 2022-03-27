@@ -18,6 +18,10 @@ import { Link } from '@/components/ui';
 
 export const NAV_ITEMS = [
   {
+    title: 'Home',
+    url: '/',
+  },
+  {
     title: 'Services',
     url: '/services',
   },
@@ -43,6 +47,7 @@ const Navbar = () => {
       >
       <Flex
         alignItems={'flex-start'}
+        bgColor='white'
         py={4}
         px={{
           base: 4,

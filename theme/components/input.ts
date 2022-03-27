@@ -9,7 +9,10 @@ const theme = {
     }
   },
   sizes: {
-    md: {}
+    md: {
+      field: {
+      }
+    }
   },
   variants: {
     'with-shadow': {

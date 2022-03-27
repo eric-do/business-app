@@ -2,7 +2,6 @@ import {
   Heading,
   Text,
   VStack,
-  Divider,
 } from '@chakra-ui/react';
 
 const Hero = () => {
@@ -13,16 +12,16 @@ const Hero = () => {
         base: 5,
         md: 10
       }}
-      pt={{
+      mt={{
         base: 0,
-        md: 10
+        md: 20
       }}
     >
       <Heading
         as='h1'
         ml={{
           base: 0,
-          md: '30%! important'
+          md: '40%! important'
         }}
         fontSize={{
           base: '3xl',
@@ -30,7 +29,7 @@ const Hero = () => {
         }}
         w={{
           base: '100%',
-          md: '50%'
+          md: '60%'
         }}
         textTransform={'uppercase'}
       >
@@ -40,7 +39,7 @@ const Hero = () => {
         as='h2'
         ml={{
           base: 0,
-          md: '10% !important'
+          md: '5% !important'
         }}
         fontSize={{
           base: '3xl',
@@ -48,15 +47,16 @@ const Hero = () => {
         }}
         w={{
           base: '100%',
-          md: '30%'
+          md: '40%'
         }}
         fontWeight={400}
         textTransform={'uppercase'}
       >
         Level up your tech stack.
       </Heading>
-      <Divider colorScheme={'red'} />
       <Text
+        borderTop={'1px'}
+        pt={5}
         ml={{
           base: 0,
           md: '55% !important'

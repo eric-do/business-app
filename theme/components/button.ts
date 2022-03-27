@@ -7,14 +7,14 @@ const theme = {
     borderColor: 'black',
     bgColor: 'white',
     borderWidth: 3,
-    py: 5
   },
   sizes: {
     md: {}
   },
   variants: {
     'with-shadow': {
-      boxShadow: '7px 7px 0px black'
+      boxShadow: '7px 7px 0px black',
+      fontWeight: 700
     },
     'ghost': {
       borderWidth: 0

@@ -12,19 +12,21 @@ const DesktopConsultation = () => {
         md: 'flex'
       }}
       justifyContent='center'
-      py={12}
+      my={30}
+      height={100}
       spacing={-1}
     >
       <Input
-        py={5}
         bg={'white'}
         borderWidth={3}
         borderColor='black'
         variant={'with-shadow'}
-        w='auto'
+        height='60px'
+        w='15%'
       />
       <Button
         w='auto'
+        height='60px'
         variant={'with-shadow'}
       >
         Request consultation

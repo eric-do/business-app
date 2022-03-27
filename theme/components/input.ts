@@ -17,6 +17,8 @@ const theme = {
   variants: {
     'with-shadow': {
       field: {
+        borderWidth: '3px',
+        borderColor: 'black',
         boxShadow: '7px 7px 0px black'
       }
     }

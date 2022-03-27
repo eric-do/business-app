@@ -1,10 +1,11 @@
 import React from 'react';
 import { Box, Text } from '@chakra-ui/react';
+import { InfoRequestForm } from '@/components/pages/contact';
 
 const Contact = () => {
   return (
     <Box>
-      <Text>Contact Us</Text>
+      <InfoRequestForm />
     </Box>
   )
 }

@@ -1,10 +1,6 @@
 import React from 'react';
-import {
-  Box,
-  VStack,
-  Text
-} from '@chakra-ui/react';
-import { Link } from '@/components/ui'
+import { Box, VStack, Text } from '@chakra-ui/react';
+import { Link } from '@/components/ui';
 
 interface CardProps {
   title: string;
@@ -13,33 +9,27 @@ interface CardProps {
 }
 const ServiceCard = ({ title, price, duration }: CardProps) => {
   return (
-    <Link src='/contact'>
     <Box
       layerStyle='with-shadow'
-      w={250}
+      w={{
+        base: '100%',
+        md: 300,
+      }}
+      minW={{
+        base: '100%',
+        md: 250
+      }}
       p={3}
     >
-      <VStack
-        alignItems='flex-start'
-      >
-        <Text
-          fontWeight={700}
-        >
-          {title}
-        </Text>
-        <Text
-          fontWeight={400}
-        >
-          Duration: {duration}
-        </Text>
-        <Text
-        >
-          {price}
-        </Text>
-      </VStack>
+      <Link src='/contact'>
+        <VStack alignItems='flex-start'>
+          <Text fontWeight={700}>{title}</Text>
+          <Text fontWeight={400}>Duration: {duration}</Text>
+          <Text>{price}</Text>
+        </VStack>
+      </Link>
     </Box>
-    </Link>
-  )
+  );
 };
 
 export default ServiceCard;

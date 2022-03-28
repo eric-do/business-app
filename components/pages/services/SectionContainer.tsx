@@ -28,7 +28,10 @@ const SectionContainer = ({ children, title }: Props) => {
           {title}
       </Heading>
       <VStack
-        display={{ md: 'none' }}
+        display={{
+          base: 'flex',
+          md: 'none'
+        }}
         spacing={5}
         p={0}
         mt={'10'}

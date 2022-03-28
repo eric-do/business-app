@@ -10,7 +10,7 @@ const Education = () => {
       spacing={8}
       px={{
         base: 0,
-        md: '10%',
+        md: '20%',
       }}
     >
       {courses.map((course) => (

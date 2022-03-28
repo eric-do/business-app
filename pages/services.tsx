@@ -4,7 +4,8 @@ import {
   Flex,
   Text,
   Heading,
-  VStack
+  VStack,
+  Center
 } from '@chakra-ui/react';
 
 const services = [
@@ -25,34 +26,9 @@ const services = [
 
 const Services = () => {
   return (
-    <Box>
-      <VStack>
-        <Heading
-          as='h1'
-          size='xl'
-        >
-          Services
-        </Heading>
-        {services.map(service => (
-          <VStack
-            justifyContent={'center'}
-            key={service.title}
-            py={5}
-            px={5}
-          >
-            <Heading
-              as='h2'
-              size='lg'
-            >
-              {service.title}
-            </Heading>
-            <Text>
-              {service.description}
-            </Text>
-          </VStack>
-        ))}
-      </VStack>
-    </Box>
+    <Center>
+      Pending
+    </Center>
   )
 }
 

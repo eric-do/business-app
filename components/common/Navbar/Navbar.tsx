@@ -71,11 +71,6 @@ const Navbar = () => {
           }}
         >
           <DesktopNav />
-          <Button
-            variant='with-shadow'
-          >
-            {contact}
-          </Button>
         </Flex>
         <VStack>
           <Flex
@@ -139,6 +134,16 @@ const DesktopNav = () => {
           </Text>
         </Link>
       ))}
+      <Link
+        src='/contact'
+      >
+        <Button
+          variant='with-shadow'
+          p={6}
+        >
+          {contact}
+        </Button>
+      </Link>
     </HStack>
   );
 };

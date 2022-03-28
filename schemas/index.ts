@@ -1,0 +1,1 @@
+export { default as infoRequest } from './infoRequest';

@@ -1,28 +1,29 @@
 import React from 'react';
 import { Box, Flex, Text, Heading, VStack, Center } from '@chakra-ui/react';
-import { Accordion, SectionContainer } from '@/components/pages/education';
-import { courses } from '@/assets/education';
+import { SectionContainer, ServiceCard } from '@/components/pages/services';
+import { services } from '@/assets/services';
 
 const Education = () => {
   return (
     <VStack
       w='100%'
-      spacing={8}
+      spacing={14}
       px={{
         base: 0,
-        md: '20%',
+        md: '10%',
       }}
     >
-      {courses.map((course) => (
+      {services.map((service) => (
         <SectionContainer
-          key={course.title}
-          title={course.title}
+          key={service.category}
+          title={service.category}
         >
-          {course.schedule.map(({ title, description }) => (
-            <Accordion
+          {service.products.map(({ title, duration, price }) => (
+            <ServiceCard
               key={title}
               title={title}
-              description={description}
+              duration={duration}
+              price={price}
             />
           ))}
         </SectionContainer>

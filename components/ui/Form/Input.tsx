@@ -15,6 +15,7 @@ interface CustomInputProps {
   label?: string;
   id: string;
   name: string;
+  placeholder?: string;
 }
 
 const FormikChakraInput: React.FC<CustomInputProps> = ({
@@ -34,6 +35,7 @@ const FormikChakraInput: React.FC<CustomInputProps> = ({
         onBlur={field.onBlur}
         onChange={field.onChange}
         variant='with-shadow'
+        {...props}
       />
       {touched && error && <FormErrorMessage>{error}</FormErrorMessage>}
     </FormControl>

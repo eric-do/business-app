@@ -49,12 +49,23 @@ const CustomAccordion = ({ title, description }: {
           <Box
             flex='1'
             textAlign='left'
+            fontWeight={700}
+            fontSize={{
+              base: 'md',
+              md: 'xl'
+            }}
           >
             {title}
           </Box>
           <AccordionIcon />
         </AccordionButton>
-        <AccordionPanel pb={4}>
+        <AccordionPanel
+          pb={4}
+          fontSize={{
+            base: 'md',
+            md: 'xl'
+          }}
+        >
           {description}
         </AccordionPanel>
       </AccordionItem>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Text, Center, Image, VStack } from '@chakra-ui/react';
+import { Box, Divider, Text, Center, Image, VStack } from '@chakra-ui/react';
 import { DesktopConsultation, MobileConsultation } from '@/components/pages/home';
 import { SectionTitle, StatsList } from '@/components/pages/about';
 
@@ -56,6 +56,7 @@ const About = () => {
           >
             <DesktopConsultation />
           </Box>
+          <Divider />
           <Box
             display={{
               base: 'flex',
@@ -79,6 +80,7 @@ const About = () => {
             <strong>strong mental models</strong>.
           </Text>
         </VStack>
+        <Divider />
         <VStack
           w='100%'
           alignItems={'flex-start'}

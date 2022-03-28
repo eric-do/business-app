@@ -4,6 +4,7 @@ import {
   VStack,
   Button
 } from '@chakra-ui/react';
+import { Link } from '@/components/ui';
 
 interface Props {
   title: string;
@@ -40,13 +41,17 @@ const SellingPoint = ({ title, description }: Props) => {
       >
         {description}
       </Text>
-      <Button
-        variant='with-shadow'
-        p={7}
-        width='auto'
+      <Link
+        src='/education'
       >
-        Learn more
-      </Button>
+        <Button
+          variant='with-shadow'
+          p={7}
+          width='auto'
+        >
+          Learn more
+        </Button>
+      </Link>
     </VStack>
   )
 };

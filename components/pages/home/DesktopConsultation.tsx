@@ -8,10 +8,6 @@ import {
 const DesktopConsultation = () => {
   return (
       <HStack
-        display={{
-          base: 'none',
-          md: 'flex'
-        }}
         w='700px'
         height={100}
         spacing={-1}

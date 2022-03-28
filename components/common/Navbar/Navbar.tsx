@@ -22,12 +22,8 @@ export const NAV_ITEMS = [
     url: '/',
   },
   {
-    title: 'Services',
-    url: '/services',
-  },
-  {
-    title: 'Careers',
-    url: '/careers',
+    title: 'Education',
+    url: '/education',
   },
   {
     title: 'About',

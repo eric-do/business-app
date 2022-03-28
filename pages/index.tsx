@@ -3,7 +3,8 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import {
   Box,
-  VStack
+  VStack,
+  Center
 } from '@chakra-ui/react';
 import {
   Hero,
@@ -17,7 +18,9 @@ const Home: NextPage = () => {
     <Box>
       <Hero />
       <MobileConsultation />
+      <Center my={10}>
       <DesktopConsultation />
+      </Center>
       <VStack
         pt={5}
         spacing={10}

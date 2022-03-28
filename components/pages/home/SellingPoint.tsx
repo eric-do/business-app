@@ -2,6 +2,7 @@ import {
   Heading,
   Text,
   VStack,
+  Button
 } from '@chakra-ui/react';
 
 interface Props {
@@ -39,6 +40,12 @@ const SellingPoint = ({ title, description }: Props) => {
       >
         {description}
       </Text>
+      <Button
+        variant='with-shadow'
+        width='auto'
+      >
+        Learn more
+      </Button>
     </VStack>
   )
 };

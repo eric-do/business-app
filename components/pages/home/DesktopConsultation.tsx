@@ -19,6 +19,7 @@ const DesktopConsultation = () => {
           variant={'with-shadow'}
           height='60px'
           w='60%'
+          placeholder='Email address'
         />
         <Button
           w='auto'

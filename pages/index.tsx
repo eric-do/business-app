@@ -13,7 +13,15 @@ const Home: NextPage = () => {
   return (
     <Box>
       <Hero />
-      <MobileConsultation />
+      <Center
+        display={{
+          base: 'flex',
+          md: 'none'
+        }}
+        my={10}
+      >
+        <MobileConsultation />
+      </Center>
       <Center
         display={{
           base: 'none',

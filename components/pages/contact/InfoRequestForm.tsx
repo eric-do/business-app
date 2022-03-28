@@ -52,18 +52,21 @@ const InfoRequestForm = () => {
                     type='text'
                     name='name'
                     label='Name'
+                    placeholder='Sam Somebody'
                   />
                   <Input
                     id='email'
                     type='email'
                     name='email'
                     label='Email'
+                    placeholder='sam@mail.com'
                   />
                   <TextArea
                     id='query'
                     type='text'
                     name='query'
                     label='Description'
+                    placeholder={`Hi Eric! I'm interested in getting my resume reviewed.`}
                   />
                 </VStack>
                 <Button

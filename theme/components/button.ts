@@ -14,7 +14,8 @@ const theme = {
   variants: {
     'with-shadow': {
       boxShadow: '7px 7px 0px black',
-      fontWeight: 700
+      fontWeight: 700,
+      fontSize: 'xl',
     },
     'ghost': {
       borderWidth: 0

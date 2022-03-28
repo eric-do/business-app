@@ -42,6 +42,7 @@ const SellingPoint = ({ title, description }: Props) => {
       </Text>
       <Button
         variant='with-shadow'
+        p={7}
         width='auto'
       >
         Learn more

@@ -139,6 +139,7 @@ const DesktopNav = () => {
       >
         <Button
           variant='with-shadow'
+          p={6}
         >
           {contact}
         </Button>

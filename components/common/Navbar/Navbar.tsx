@@ -26,6 +26,10 @@ export const NAV_ITEMS = [
     url: '/education',
   },
   {
+    title: 'Services',
+    url: '/services',
+  },
+  {
     title: 'About',
     url: '/about',
   },

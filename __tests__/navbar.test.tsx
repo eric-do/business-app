@@ -3,12 +3,8 @@ import Navbar, { brand, contact } from '@/components/common/Navbar/Navbar'
 
 const NAV_ITEMS = [
   {
-    title: 'Services',
-    url: '/services',
-  },
-  {
-    title: 'Careers',
-    url: '/careers',
+    title: 'Education',
+    url: '/education',
   },
   {
     title: 'About',

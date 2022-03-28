@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Heading, Text, Center, Image, VStack } from '@chakra-ui/react';
-import { DesktopConsultation } from '@/components/pages/home';
+import { DesktopConsultation, MobileConsultation } from '@/components/pages/home';
 import { SectionTitle, StatsList } from '@/components/pages/about';
 
 const stats = [
@@ -45,12 +45,26 @@ const About = () => {
             launched the careers of <strong>over 300 students</strong>.
           </Text>
           <Box
+            display={{
+              base: 'none',
+              md: 'flex'
+            }}
             w={{
               md: '50%',
             }}
             px={0}
           >
             <DesktopConsultation />
+          </Box>
+          <Box
+            display={{
+              base: 'flex',
+              md: 'none'
+            }}
+            w='100%'
+            px={0}
+          >
+            <MobileConsultation />
           </Box>
         </VStack>
         <VStack

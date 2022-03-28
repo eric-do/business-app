@@ -7,7 +7,7 @@ import {
 const MobileConsultation = () => {
   return (
     <VStack
-      display={{ md: 'none' }}
+      w='100%'
       py={7}
     >
       <VStack
@@ -20,6 +20,7 @@ const MobileConsultation = () => {
           borderWidth={3}
           borderColor='black'
           variant={'with-shadow'}
+          placeholder='Email address'
         />
         <Button
           variant={'with-shadow'}

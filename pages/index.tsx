@@ -1,12 +1,11 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
 import { Box, VStack, Center } from '@chakra-ui/react';
 import {
   Hero,
   SellingPoint,
   DesktopConsultation,
   MobileConsultation,
+  Testimonials
 } from '@/components/pages/home';
 
 const Home: NextPage = () => {
@@ -31,6 +30,7 @@ const Home: NextPage = () => {
       >
         <DesktopConsultation />
       </Center>
+      <Testimonials />
       <VStack
         pt={{
           base: 0,

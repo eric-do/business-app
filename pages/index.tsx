@@ -5,18 +5,19 @@ import {
   SellingPoint,
   DesktopConsultation,
   MobileConsultation,
-  Testimonials
+  Testimonials,
 } from '@/components/pages/home';
 
 const Home: NextPage = () => {
   return (
-    <Box>
+    <VStack spacing={10}>
       <Hero />
       <Center
         display={{
           base: 'flex',
-          md: 'none'
+          md: 'none',
         }}
+        w='100%'
         my={10}
       >
         <MobileConsultation />
@@ -24,7 +25,7 @@ const Home: NextPage = () => {
       <Center
         display={{
           base: 'none',
-          md: 'flex'
+          md: 'flex',
         }}
         my={10}
       >
@@ -34,10 +35,12 @@ const Home: NextPage = () => {
       <VStack
         pt={{
           base: 0,
-          md: 5
+          md: 5,
         }}
+        pl={0}
         spacing={10}
         alignItems='flex-start'
+        alignSelf='flex-start'
       >
         {subsections.map(({ title, description }) => (
           <SellingPoint
@@ -47,7 +50,7 @@ const Home: NextPage = () => {
           />
         ))}
       </VStack>
-    </Box>
+    </VStack>
   );
 };
 

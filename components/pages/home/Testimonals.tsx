@@ -14,7 +14,7 @@ const Testimonials = () => {
         base: 'column',
         md: 'row'
       }}
-      spacing={5}
+      spacing={7}
       justifyContent='space-between'
     >
       {testimonials.map(testimonial => (

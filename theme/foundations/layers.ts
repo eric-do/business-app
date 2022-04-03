@@ -1,11 +1,11 @@
 const theme = {
   'with-shadow': {
-    boxShadow: '7px 7px 0px black',
-    fontWeight: 700,
     fontSize: 'xl',
-    borderColor: 'black',
     bgColor: 'white',
+    fontWeight: 700,
     borderWidth: 3,
+    borderColor: 'black',
+    boxShadow: '7px 7px 0px black',
   },
 };
 

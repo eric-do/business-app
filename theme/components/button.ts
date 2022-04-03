@@ -16,6 +16,13 @@ const theme = {
       boxShadow: '7px 7px 0px black',
       fontWeight: 700,
       fontSize: 'xl',
+      bgColor: 'white'
+    },
+    'call-to-action': {
+      boxShadow: '7px 7px 0px black',
+      fontWeight: 700,
+      fontSize: 'xl',
+      bgColor: 'lightblue'
     },
     'ghost': {
       borderWidth: 0

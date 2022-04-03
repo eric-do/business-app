@@ -138,7 +138,7 @@ const DesktopNav = () => {
         src='/contact'
       >
         <Button
-          variant='with-shadow'
+          layerStyle='with-shadow'
           p={6}
         >
           {contact}
@@ -183,7 +183,7 @@ const MobileNav = ({ onToggle }: { onToggle: () => void }) => {
           <Button
             alignSelf='center'
             onClick={onToggle}
-            variant='with-shadow'
+            layerStyle='with-shadow'
           >
             {contact}
           </Button>

@@ -8,12 +8,12 @@ export const SectionTitle = ({ title }: { title: string }) => {
       as='h1'
       fontSize={{
         base: '3xl',
-        md: '6xl',
+        md: '5xl',
       }}
       fontWeight={700}
       w={{
         base: '100%',
-        md: '70%',
+        md: '65%',
       }}
     >
       {title}

@@ -19,11 +19,11 @@ const MobileConsultation = () => {
           bg={'white'}
           borderWidth={3}
           borderColor='black'
-          variant={'with-shadow'}
+          layerStyle='with-shadow'
           placeholder='Email address'
         />
         <Button
-          variant={'with-shadow'}
+          layerStyle='with-shadow'
         >
           Request consultation
         </Button>

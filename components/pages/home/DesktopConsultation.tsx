@@ -16,7 +16,7 @@ const DesktopConsultation = () => {
           bg={'white'}
           borderWidth={3}
           borderColor='black'
-          variant={'with-shadow'}
+          layerStyle='with-shadow'
           height='60px'
           w='60%'
           placeholder='Email address'
@@ -24,7 +24,8 @@ const DesktopConsultation = () => {
         <Button
           w='auto'
           height='60px'
-          variant={'with-shadow'}
+          layerStyle='with-shadow'
+          variant='with-shadow'
         >
           Request consultation
         </Button>

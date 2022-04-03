@@ -45,7 +45,7 @@ const SellingPoint = ({ title, description }: Props) => {
         src='/education'
       >
         <Button
-          variant='with-shadow'
+          layerStyle='with-shadow'
           p={7}
           width='auto'
         >

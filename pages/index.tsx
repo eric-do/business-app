@@ -35,13 +35,6 @@ const Home: NextPage = () => {
         <DesktopConsultation />
       </Center>
       <Testimonials />
-      <Heading
-        as='h2'
-        size='xl'
-        alignSelf={'flex-start'}
-      >
-        Students learn to
-      </Heading>
       <VStack
         pt={{
           base: 0,

@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { Box, VStack, Center } from '@chakra-ui/react';
+import { Box, VStack, Center, Heading } from '@chakra-ui/react';
 import {
   Hero,
   SellingPoint,
@@ -10,7 +10,10 @@ import {
 
 const Home: NextPage = () => {
   return (
-    <VStack spacing={10}>
+    <VStack spacing={{
+      base: 8,
+      md: 14
+    }}>
       <Hero />
       <Center
         display={{
@@ -32,6 +35,13 @@ const Home: NextPage = () => {
         <DesktopConsultation />
       </Center>
       <Testimonials />
+      <Heading
+        as='h2'
+        size='xl'
+        alignSelf={'flex-start'}
+      >
+        Students learn to
+      </Heading>
       <VStack
         pt={{
           base: 0,
@@ -67,7 +77,7 @@ const subsections = [
                   reusable code for your Express server.`,
   },
   {
-    title: 'Learn algorithms to get hired',
+    title: 'Solve algorithms that will get you hired',
     description: `Level up your problem solving skills and
                   prepare for tech interviews by learning
                   common algorithm patterns.`,
